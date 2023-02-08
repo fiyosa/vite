@@ -1,8 +1,13 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
 export default function Path() {
   const Layout = () => {
-    return <></>
+    return (
+      <>
+        <Outlet />
+      </>
+    )
   }
   const Home = () => {
     return <>Home</>
