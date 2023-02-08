@@ -8,5 +8,8 @@ npm i -D @types/react @types/react-dom @types/node @vitejs/plugin-react dotenv t
 
 # copy files
 
-vite.config.ts tsconfig.node.json tsconfig.json package.json
- 
+vite.config.ts
+tsconfig.node.json
+tsconfig.json
+package.json
+index.html
