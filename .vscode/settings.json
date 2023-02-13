@@ -8,6 +8,10 @@
   "prettier.printWidth": 80,
   "editor.guides.indentation": true,
   "editor.tabSize": 2,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/vendor": true
+  },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
