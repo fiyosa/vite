@@ -11,7 +11,9 @@
   "prettier.requireConfig": false,
   "search.exclude": {
     "**/node_modules": true,
-    "**/vendor": true
+    "**/vendor": true,
+    "*.lock": true,
+    "*lock.json": true
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
