@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Layout from './components/static/layout/layout'
-import NotFound from './pages/404'
-import Home from './pages/home/home'
+import Layout from '../components/static/layout/layout'
+import NotFound from './404'
+import Home from './home/home'
 
 export default function Path() {
   return (
