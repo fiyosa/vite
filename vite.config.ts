@@ -7,6 +7,7 @@ dotenv.config()
 export default defineConfig({
   plugins: [react()],
   root: 'src',
+  publicDir: '../public',
   envDir: '..',
   define: {
     'process.env': process.env,
