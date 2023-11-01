@@ -1,0 +1,79 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }, // fix warning eslint to react ts
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended" // check prettier formater
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "react", "prettier"], // add prettier formater
+  "ignorePatterns": ["node_modules", "vendor", "build"],
+  "rules": {
+    // react start
+    "react/react-in-jsx-scope": "off", // allow tag without name
+    "react/jsx-no-target-blank": "off", // allow tag 'a' doesn't have prop rel
+    "react/jsx-curly-spacing": ["error", { "when": "never", "allowMultiline": true, "children": true }], // space in brace curl, e.g. <div foo={ name }> instead of  <div foo={name}>
+    "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }], // for tag react, e.g. <div /> instead of <div/ >
+    "jsx-quotes": ["error", "prefer-double"], // props in tag html with double quote e.g. <div foo="bar" />
+    "react/no-unknown-property": ["error", { "ignore": ["css"] }], // disallow props tag html if not exist
+    "react/no-deprecated": "error", // forces the use of the latest react version
+    "react/jsx-key": "error", // forces the use of the key from tag html while looping
+    "react/prop-types": "off", // allow props without declare interface or type
+    "react/display-name": "off", // allows you to name your component
+    // react end
+
+    "@typescript-eslint/no-unused-vars": "error", // variable or function aren't used
+    "@typescript-eslint/no-explicit-any": "off", // type variable isn't used any
+    "space-in-parens": ["error", "never"], // e.g. "if (foo)" instead of "if ( foo )"
+    "object-curly-spacing": ["error", "always"], // e.g. { foo: bar} instead of {foo: bar}
+    "array-bracket-spacing": ["error", "never"], // e.g. [1] instead of [ 1 ]
+    "comma-spacing": ["error", { "before": false, "after": true }], // e.g. [1, 2] instead of [1 , 2]
+    "arrow-spacing": ["error", { "before": true, "after": true }], // e.g. () => {} instead of ()=>{}
+    "arrow-parens": ["error", "always"], // e.g. "(foo) => {}" instead of "foo => {}"
+    "space-before-blocks": ["error", "always"], // e.g. "if () {}" instead of "if (){}"
+    "spaced-comment": ["error", "always"], // e.g. "// foo" instead of "//foo"
+    "block-spacing": ["error", "always"], // e.g. "function foo() { return true; }" instead of "function foo() {return true;}"
+    "space-before-function-paren": ["error", "never"], // e.g. "function foo () {}" instead of "function foo() {}"
+    "no-trailing-spaces": ["error", { "ignoreComments": true }], // disallow char at end line except comment
+    "eol-last": ["error", "always"], // newline end of line
+    "no-var": ["error"], // disallow variable var
+    "prefer-const": "off", // format variable prefer const instead of let for variable with value
+    "curly": ["error", "all"],
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }], // first brace curl same with line func
+    "no-mixed-spaces-and-tabs": "error", // disallow space and tab in same line
+    "sort-imports": ["error", { "ignoreDeclarationSort": true }], // sorting import component
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0, "maxEOF": 0 }], // disallow blank in first line
+    "no-console": "off", // allow use console.log
+    "eqeqeq": "error", // forces the use operator: === or !== instead of == or !=
+    "keyword-spacing": "error", // space between syntax with name, e.g. "if (foo)" instead of "if(foo)"
+    "no-case-declarations": "off", // allow switch without declare input type
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "never",
+        "exports": "never",
+        "functions": "never"
+      }
+    ], // format comma in latest value for array and object
+    "semi": ["error", "never"], // disable use dot comma in end lines
+    "no-extra-semi": "off", // allow semicolon anywhere
+    "no-tabs": "off", // disallow format \t for indent
+    "quotes": ["error", "single"], // force single quote instead of double quote
+    "max-len": ["error", { "code": 120 }] // width colomn 120 char
+  }
+}

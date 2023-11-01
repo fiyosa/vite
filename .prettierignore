@@ -1,0 +1,8 @@
+node_modules
+coverage
+
+vendor
+public
+build
+*.lock
+*lock.json

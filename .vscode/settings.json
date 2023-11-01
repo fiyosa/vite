@@ -3,12 +3,6 @@
   "editor.formatOnSave": true,
   "editor.guides.indentation": true,
   "editor.tabSize": 2,
-  "prettier.semi": false,
-  "prettier.useTabs": false,
-  "prettier.singleQuote": true,
-  "prettier.trailingComma": "es5",
-  "prettier.printWidth": 120,
-  "prettier.requireConfig": false,
   "search.exclude": {
     "**/node_modules": true,
     "**/vendor": true,

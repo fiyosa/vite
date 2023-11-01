@@ -22,5 +22,6 @@ dist-ssr
 *.sln
 *.sw?
 
-yarn.lock
-package-lock.json
+*.lock
+*lock.json
+build
