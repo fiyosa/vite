@@ -5,12 +5,14 @@
 
 # Setup eslint and prettier
 
-- npm init @eslint/config
+- yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-plugin-react
 - yarn add -D prettier eslint-config-prettier eslint-plugin-prettier
 
 # Setup husky
 
-- npx husky-init && yarn
+- yarn add -D husky
+- yarn husky install
+- yarn husky add .husky/pre-commit "npm run lint" // if file pre-commit doesn't exist
 
 # Extension vscode
 
