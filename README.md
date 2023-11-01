@@ -1,6 +1,6 @@
 # Install package
 
-yarn add @types/react @types/react-dom @types/node @vitejs/plugin-react @types/react-router-dom dotenv typescript react react-dom react-router-dom vite
+yarn add @types/react @types/react-dom @types/node @vitejs/plugin-react @types/react-router-dom dotenv typescript react react-dom react-router-dom axios vite
 
 # Setup eslint and prettier
 

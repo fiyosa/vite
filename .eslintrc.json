@@ -46,7 +46,7 @@
     "space-before-blocks": ["error", "always"], // e.g. "if () {}" instead of "if (){}"
     "spaced-comment": ["error", "always"], // e.g. "// foo" instead of "//foo"
     "block-spacing": ["error", "always"], // e.g. "function foo() { return true; }" instead of "function foo() {return true;}"
-    "space-before-function-paren": ["error", "never"], // e.g. "function foo () {}" instead of "function foo() {}"
+    // "space-before-function-paren": ["error", "never"], // e.g. "function foo() {}" instead of "function foo () {}"
     "no-trailing-spaces": ["error", { "ignoreComments": true }], // disallow char at end line except comment
     "eol-last": ["error", "always"], // newline end of line
     "no-var": ["error"], // disallow variable var
