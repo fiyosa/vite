@@ -60,6 +60,7 @@
     "eqeqeq": "error", // forces the use operator: === or !== instead of == or !=
     "keyword-spacing": "error", // space between syntax with name, e.g. "if (foo)" instead of "if(foo)"
     "no-case-declarations": "off", // allow switch without declare input type
+    "no-constant-condition": "off", // allow constant condition e.g. "if (true)"
     "comma-dangle": [
       "error",
       {
