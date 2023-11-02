@@ -51,7 +51,7 @@
     "eol-last": ["error", "always"], // newline end of line
     "no-var": ["error"], // disallow variable var
     "prefer-const": "off", // format variable prefer const instead of let for variable with value
-    "curly": ["error", "all"],
+    "curly": ["error", "all"], // e.g. "if(a) { return 0 }" instead of "if(a) return 0"
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }], // first brace curl same with line func
     "no-mixed-spaces-and-tabs": "error", // disallow space and tab in same line
     "sort-imports": ["error", { "ignoreDeclarationSort": true }], // sorting import component
