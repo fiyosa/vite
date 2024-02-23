@@ -4,5 +4,6 @@ coverage
 vendor
 public
 build
+dist
 *.lock
 *lock.json
