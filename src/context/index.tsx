@@ -9,7 +9,7 @@ export const ContextProvider = ({ children }: { children: ReactNode }) => {
   const [count, setCount] = useState(countContext.get)
 
   const value = {
-    countContext: { get: count, set: setCount },
+    countContext: { get: count, set: setCount, init: () => setCount(countContext.get) },
   }
 
   return <SetupContext.Provider value={value}>{children}</SetupContext.Provider>

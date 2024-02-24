@@ -30,6 +30,15 @@ function Home() {
         >
           count is {count}
         </button>
+        <button
+          style={{ marginLeft: '5px' }}
+          onClick={() => {
+            setCount(0)
+            countContext.init()
+          }}
+        >
+          Reset
+        </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>

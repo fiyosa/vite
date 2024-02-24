@@ -10,6 +10,6 @@ const get: IGet = {
 
 const set = (_: IGet) => {}
 
-const countContext = { get, set }
+const countContext = { get, set, init: () => {} }
 
 export default countContext
