@@ -1,18 +1,34 @@
 # Install package
 
 - delete dependencies and devDependencies in package.json
-- yarn add @types/react @types/react-dom @types/node @vitejs/plugin-react @types/react-router-dom dotenv typescript react react-dom react-router-dom axios vite --network-timeout 100000
+
+```sh
+yarn add @types/react @types/react-dom @types/node @vitejs/plugin-react @types/react-router-dom dotenv typescript react react-dom react-router-dom axios vite --network-timeout 100000
+```
 
 # Setup eslint and prettier
 
-- yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-plugin-react
-- yarn add -D prettier eslint-config-prettier eslint-plugin-prettier
+```sh
+yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-plugin-react
+```
+
+```sh
+yarn add -D prettier eslint-config-prettier eslint-plugin-prettier
+```
 
 # Setup husky
 
-- yarn add -D husky
-- yarn husky install
-- yarn husky add .husky/pre-commit "npm run lint" // if file pre-commit doesn't exist
+```sh
+yarn add -D husky
+```
+
+```sh
+yarn husky init
+```
+
+```sh
+echo "npm run lint" > .husky/pre-commit
+```
 
 # Extension vscode
 
@@ -21,8 +37,8 @@
 
 # Copy files ( for Laravel )
 
-vite.config.ts
-tsconfig.node.json
-tsconfig.json
-package.json
-index.html
+- vite.config.ts
+- tsconfig.node.json
+- tsconfig.json
+- package.json
+- index.html
