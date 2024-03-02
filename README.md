@@ -34,6 +34,7 @@ echo "npm run lint:fix" > .husky/pre-commit
 
 - **[Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)**
 - **[ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)**
+- **[Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)**
 
 # Copy files ( for Laravel )
 
