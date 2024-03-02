@@ -27,7 +27,7 @@ yarn husky init
 ```
 
 ```sh
-echo "npm run lint" > .husky/pre-commit
+echo "npm run lint:fix" > .husky/pre-commit
 ```
 
 # Extension vscode
