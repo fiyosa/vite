@@ -8,6 +8,8 @@ yarn add @types/react @types/react-dom @types/node @vitejs/plugin-react @types/r
 
 # Setup eslint and prettier
 
+to bypass checking --no-verify
+
 ```sh
 yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-plugin-react
 ```
