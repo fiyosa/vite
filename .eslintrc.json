@@ -52,13 +52,13 @@
     "eol-last": ["error", "always"], // newline end of line
     "no-var": ["error"], // disallow variable var
     "prefer-const": "off", // format variable prefer const instead of let for variable with value
-    "curly": ["error", "all"], // e.g. "if(a) { return 0 }" instead of "if(a) return 0"
+    "curly": "off", // e.g. "if(a) return 0" instead of "if(a) { return 0 }"
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }], // first brace curl same with line func
     "no-mixed-spaces-and-tabs": "error", // disallow space and tab in same line
     "sort-imports": ["error", { "ignoreDeclarationSort": true }], // sorting import component
     "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0, "maxEOF": 0 }], // disallow blank in first line
     "no-console": "off", // allow use console.log
-    "eqeqeq": "error", // forces the use operator: === or !== instead of == or !=
+    "eqeqeq": "off", // forces the use operator: === or !== instead of == or !=
     "keyword-spacing": "error", // space between syntax with name, e.g. "if (foo)" instead of "if(foo)"
     "no-case-declarations": "off", // allow switch without declare input type
     "no-constant-condition": "off", // allow constant condition e.g. "if (true)"
