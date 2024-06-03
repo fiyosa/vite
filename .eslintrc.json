@@ -2,28 +2,28 @@
   "root": true,
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest": true
   },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  }, // fix warning eslint to react ts
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended" // check prettier formater
-  ],
+  "settings": { "react": { "version": "detect" } }, // fix warning eslint to react ts
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "react", "prettier"], // add prettier formater
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended" // check prettier formater
+  ],
+  "plugins": ["@typescript-eslint", "react", "react-hooks", "prettier"], // add prettier formater
   "ignorePatterns": ["node_modules", "vendor", "build", "dist"],
   "rules": {
     // react start
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off", // allow tag without name
     "react/jsx-no-target-blank": "off", // allow tag 'a' doesn't have prop rel
     "react/jsx-curly-spacing": ["error", { "when": "never", "allowMultiline": true, "children": true }], // space in brace curl, e.g. <div foo={ name }> instead of  <div foo={name}>
