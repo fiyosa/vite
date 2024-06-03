@@ -11,7 +11,7 @@ yarn add @types/react @types/react-dom @types/node @vitejs/plugin-react @types/r
 to bypass checking --no-verify
 
 ```sh
-yarn add -D eslint@^8 @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react eslint-plugin-react-hooks
+yarn add -D eslint@8.57.0 @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react eslint-plugin-react-hooks
 ```
 
 ```sh
