@@ -36,7 +36,7 @@
     "react/display-name": "off", // allows you to name your component
     // react end
 
-    "@typescript-eslint/no-unused-vars": "error", // variable or function aren't used
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "_", "varsIgnorePattern": "_" }], // variable or function aren't used
     "@typescript-eslint/no-explicit-any": "off", // type variable isn't used any
     "space-in-parens": ["error", "never"], // e.g. "if (foo)" instead of "if ( foo )"
     "object-curly-spacing": ["error", "always"], // e.g. { foo: bar} instead of {foo: bar}
