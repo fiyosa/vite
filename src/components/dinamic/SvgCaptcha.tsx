@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { ChangeEvent, useEffect, useState } from 'react'
 import svgCaptcha from 'svg-captcha-browser'
 import { logInfo } from '../../utils/helper'
 
@@ -32,7 +32,7 @@ export default function SvgCaptcha() {
       })
   }
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setUserInput(e.target.value)
   }
 
@@ -46,7 +46,7 @@ export default function SvgCaptcha() {
     }
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     generateCaptcha()
   }, [])
 
