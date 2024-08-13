@@ -6,7 +6,7 @@ import { SetupContext } from '../../context'
 
 function Home() {
   const [count, setCount] = useState(0)
-  const { countContext } = useContext(SetupContext)
+  const { countCtx } = useContext(SetupContext)
 
   return (
     <div className="App">
@@ -25,7 +25,7 @@ function Home() {
         <button
           onClick={() => {
             setCount((count) => count + 1)
-            countContext.set({ count: count + 1 })
+            countCtx.set({ count: count + 1 })
           }}
         >
           count is {count}
@@ -34,7 +34,7 @@ function Home() {
           style={{ marginLeft: '5px' }}
           onClick={() => {
             setCount(0)
-            countContext.init()
+            countCtx.init()
           }}
         >
           Reset

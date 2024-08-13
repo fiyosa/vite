@@ -1,15 +1,15 @@
 import { ReactNode, createContext, useState } from 'react'
-import countContext from './countContext'
+import { countCtx } from './countCtx'
 
 export const SetupContext = createContext({
-  countContext,
+  countCtx,
 })
 
 export const ContextProvider = ({ children }: { children: ReactNode }) => {
-  const [count, setCount] = useState(countContext.get)
+  const [count, setCount] = useState(countCtx.get)
 
   const value = {
-    countContext: { get: count, set: setCount, init: () => setCount(countContext.get) },
+    countCtx: { get: count, set: setCount, init: () => setCount(countCtx.get) },
   }
 
   return <SetupContext.Provider value={value}>{children}</SetupContext.Provider>

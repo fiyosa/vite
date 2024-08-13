@@ -1,6 +1,6 @@
 import axios, { AxiosPromise } from 'axios'
 import secret from '../../config/secret'
-import { headerAxios, throwAxios } from '../../utils/axiosUtil'
+import { axiosUtil } from '../../utils'
 
 export const userGetAuth = async (token?: string): AxiosPromise<any> => {
   return axios({
@@ -11,13 +11,9 @@ export const userGetAuth = async (token?: string): AxiosPromise<any> => {
           Accept: 'application/json',
           Authorization: `Bearer ${token}`,
         }
-      : headerAxios.auth,
+      : axiosUtil.headerAxios.auth,
     timeout: secret.SERVER_TIMEOUT,
   })
-    .then((res) => {
-      return res
-    })
-    .catch((res) => {
-      return throwAxios(res)
-    })
+    .then((res) => res)
+    .catch((res) => axiosUtil.throwAxios(res))
 }

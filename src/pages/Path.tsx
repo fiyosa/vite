@@ -2,15 +2,18 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from '../components/static/layout/layout'
 import secret from '../config/secret'
 import NotFound from './404'
-import Home from './home/home'
+import Home from './guest/Home'
+import { logInfo } from '../utils/helper'
+import Login from './guest/Login'
 
 export default function Path() {
-  console.log(secret)
+  logInfo(secret)
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
         <Route path="" element={<Layout />}>
           <Route path="*" element={<NotFound />} />
         </Route>

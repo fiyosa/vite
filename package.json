@@ -10,7 +10,8 @@
     "dev": "vite --host",
     "build": "tsc && vite build",
     "start": "vite preview --host",
-    "lint": "eslint --fix src/**/*.{js,jsx,ts,tsx}",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
+    "lint:fix": "eslint --fix src/**/*.{js,jsx,ts,tsx}",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "prepare": "husky"
   },
@@ -25,6 +26,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.2",
+    "svg-captcha-browser": "^1.0.2",
     "typescript": "^5.3.3",
     "vite": "^5.1.4"
   },
