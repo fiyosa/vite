@@ -1,17 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import dotenv from 'dotenv'
-dotenv.config()
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  root: 'src',
-  publicDir: '../public',
-  envDir: '..',
-  define: {
-    'process.env': process.env,
-  },
 
   server: {
     port: 3000,
@@ -19,23 +11,14 @@ export default defineConfig({
   },
 
   build: {
-    outDir: '../build',
     emptyOutDir: true,
     manifest: true,
     rollupOptions: {
       output: {
-        chunkFileNames: 'js/[name].[hash].js',
-        entryFileNames: 'js/[name].[hash].js',
-        assetFileNames: ({ name }) => {
-          if (/\.(gif|jpe?g|png|svg|webp)$/.test(name ?? '')) {
-            return 'images/[name].[hash][extname]'
-          }
-
-          if (/\.css$/.test(name ?? '')) {
-            return 'css/[name].[hash][extname]'
-          }
-
-          return '[name].[hash][extname]'
+        entryFileNames: 'main.js',
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name && assetInfo.name.endsWith('.css')) return 'main.css'
+          return 'assets/[name].[ext]'
         },
       },
     },

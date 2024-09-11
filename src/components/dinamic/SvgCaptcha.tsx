@@ -14,7 +14,7 @@ export default function SvgCaptcha() {
       .then(() => {
         const captcha = svgCaptcha.create({
           size: 5, // Number of characters in the CAPTCHA
-          noise: 2, // Amount of noise/lines in the image
+          noise: 5, // Amount of noise/lines in the image
           color: true, // Enable color in the CAPTCHA
           ignoreChars: '0O1Il5S2Z6G8B9Q', // filter out some characters like 0o1i
           background: '#ccffcc', // Background color of the CAPTCHA
