@@ -37,11 +37,11 @@
       "error",
       {
         "args": "all",
-        "argsIgnorePattern": "_",
+        "argsIgnorePattern": "^_(_|[a-zA-Z0-9]+_)?$",
         "caughtErrors": "all",
-        "caughtErrorsIgnorePattern": "_",
-        "destructuredArrayIgnorePattern": "_",
-        "varsIgnorePattern": "_",
+        "caughtErrorsIgnorePattern": "^_(_|[a-zA-Z0-9]+_)?$",
+        "destructuredArrayIgnorePattern": "^_(_|[a-zA-Z0-9]+_)?$",
+        "varsIgnorePattern": "^_(_|[a-zA-Z0-9]+_)?$|^__+$",
         "ignoreRestSiblings": true
       }
     ], // variable or function aren't used
