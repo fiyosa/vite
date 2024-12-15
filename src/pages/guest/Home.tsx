@@ -3,10 +3,16 @@ import { ImgReact, ImgVite } from '../../assets/img'
 import './home.css'
 import Test from '../Test'
 import { SetupContext } from '../../context'
+import { useStore } from 'zustand'
+import useZustand from '../../zustand'
+import { useSetAtom } from 'jotai'
+import useJotai from '../../jotai'
 
 function Home() {
   const [count, setCount] = useState(0)
   const { countCtx } = useContext(SetupContext)
+  const countZus = useStore(useZustand.count)
+  const setCountJo = useSetAtom(useJotai.count)
 
   return (
     <div className="App">
@@ -26,6 +32,8 @@ function Home() {
           onClick={() => {
             setCount((count) => count + 1)
             countCtx.set({ count: count + 1 })
+            countZus.set(count + 1)
+            setCountJo(count + 1)
           }}
         >
           count is {count}
@@ -35,6 +43,8 @@ function Home() {
           onClick={() => {
             setCount(0)
             countCtx.init()
+            countZus.init()
+            setCountJo(0)
           }}
         >
           Reset

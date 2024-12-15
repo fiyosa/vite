@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Layout from '../components/static/layout/layout'
+import Layout from '../components/static/layout/Layout'
 import secret from '../config/secret'
 import NotFound from './404'
 import Home from './guest/Home'
