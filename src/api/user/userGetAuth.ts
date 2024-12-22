@@ -12,7 +12,6 @@ export const userGetAuth = async (token?: string): AxiosPromise<any> => {
           Authorization: `Bearer ${token}`,
         }
       : axiosUtil.headerAxios.auth,
-    timeout: secret.SERVER_TIMEOUT,
   })
     .then((res) => res)
     .catch((res) => axiosUtil.throwAxios(res))

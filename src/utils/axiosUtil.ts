@@ -1,3 +1,6 @@
+import axios from 'axios'
+import secret from '../config/secret'
+
 export const headerAxios = {
   guest: {
     Accept: 'application/json',
@@ -8,8 +11,7 @@ export const headerAxios = {
     Authorization: `Bearer ${window.localStorage.getItem('token') ?? ''}`,
   },
   form: {
-    Accept: 'application/json',
-    Authorization: 'Bearer ' + window.localStorage.getItem('token') ?? '',
+    Authorization: `Bearer ${window.localStorage.getItem('token') ?? ''}`,
   },
 }
 
@@ -19,12 +21,45 @@ export const throwAxios = (res: any) => {
   }
   if (res?.request) {
     return {
-      state: 400,
+      status: 400,
       data: { message: 'Unable to connect to the server. Check your internet connection.' },
     }
   }
   return {
-    state: 400,
+    status: 500,
     data: { message: 'An error occurred that could not be identified.' },
   }
+}
+
+interface IProps {
+  query?: Record<string, string | number | boolean>
+}
+export const createQueryStr = (props?: IProps): string => {
+  if (!props?.query) return ''
+
+  let params = ''
+  for (const key in props.query) {
+    if (props.query.hasOwnProperty.call(props.query, key)) {
+      const queryKey = key as keyof IProps['query']
+      const queryValue = props.query[queryKey]
+      params += `&${queryKey}=${queryValue}`
+    }
+  }
+  if (params.length !== 0) params = '?' + params.substring(1)
+  return params
+}
+
+export const instance = axios.create({
+  baseURL: secret.SERVER_URL + '/api',
+  timeout: 1000 * 1,
+})
+
+export const interceptors = () => {
+  axios.interceptors.request.use((res) => {
+    return res
+  })
+
+  axios.interceptors.response.use(async (res) => {
+    return res
+  })
 }

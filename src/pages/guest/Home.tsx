@@ -7,12 +7,14 @@ import { useStore } from 'zustand'
 import useZustand from '../../zustand'
 import { useSetAtom } from 'jotai'
 import useJotai from '../../jotai'
+import { useNavigate } from 'react-router-dom'
 
 function Home() {
   const [count, setCount] = useState(0)
   const { countCtx } = useContext(SetupContext)
   const countZus = useStore(useZustand.count)
   const setCountJo = useSetAtom(useJotai.count)
+  const navigate = useNavigate()
 
   return (
     <div className="App">
@@ -52,6 +54,7 @@ function Home() {
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
+        <button onClick={() => navigate('/react-query')}>React Query</button>
       </div>
       <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
     </div>

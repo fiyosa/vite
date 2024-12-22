@@ -12,7 +12,6 @@ export const guestPostSignin = async (props: IProps): AxiosPromise<any> => {
     method: 'post',
     url: secret.SERVER_URL + '/api/auth/login',
     headers: axiosUtil.headerAxios.guest,
-    timeout: secret.SERVER_TIMEOUT,
     data: {
       username: props.username,
       password: props.password,

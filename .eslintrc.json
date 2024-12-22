@@ -65,7 +65,7 @@
     "no-mixed-spaces-and-tabs": "error", // disallow space and tab in same line
     "sort-imports": ["error", { "ignoreDeclarationSort": true }], // sorting import component
     "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0, "maxEOF": 0 }], // disallow blank in first line
-    "no-console": "error", // error use console.log
+    "no-console": "off", // error use console.log
     "eqeqeq": "off", // forces the use operator: === or !== instead of == or !=
     "keyword-spacing": "error", // space between syntax with name, e.g. "if (foo)" instead of "if(foo)"
     "no-case-declarations": "off", // allow switch without declare input type
