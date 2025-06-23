@@ -10,9 +10,14 @@ export default defineConfig({
     host: 'localhost',
   },
 
+  esbuild: {
+    legalComments: 'none',
+    drop: ['console'],
+  },
+
   build: {
     emptyOutDir: true,
-    manifest: true,
+    manifest: false,
     rollupOptions: {
       output: {
         entryFileNames: 'main.js',
